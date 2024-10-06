@@ -1,5 +1,7 @@
 # mcmeme
 
+Pull Request的时候提交小图即可 大图太容易冲突了
+
 欢迎各位提交[Pull Request](https://github.com/LIPiston/mcmeme/pulls)来扩展这张图
 ![](latest.png)
 
