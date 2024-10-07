@@ -1,9 +1,9 @@
 # mcmeme
 
-Pull Request的时候提交小图即可 大图太容易冲突了
-
 欢迎各位提交[Pull Request](https://github.com/LIPiston/mcmeme/pulls)来扩展这张图
 ![](latest.png)
+
+Pull Request的时候提交小图即可 大图太容易冲突了
 
 [QQ群](http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=GSK0q5Be9BtgPh-7UDEgw1XUc9eNlb_E&authKey=s54nZ9lIbjETFV2sQj65vJHoH04tg%2Bst%2FB%2Fo0WgVTyRGo%2BxL0ZPw8%2BHX3oNnr%2FIo&noverify=0&group_code=810025413)
 
@@ -19,7 +19,6 @@ Pull Request的时候提交小图即可 大图太容易冲突了
 ### 分支
 
 > 参考[这个issue](https://github.com/LIPiston/mcmeme/issues/5#issuecomment-2395448955)
-
 
 #### 二改
 
@@ -44,3 +43,6 @@ Pull Request的时候提交小图即可 大图太容易冲突了
 本仓库使用[CC BY-NC-SA 4.0](./LICENSE)协议
 
 在此感谢所有此图以及此GitHub仓库的贡献者
+
+## Star历史
+[![Stargazers over time](https://starchart.cc/LIPiston/mcmeme.svg?variant=adaptive)](https://starchart.cc/LIPiston/mcmeme)
