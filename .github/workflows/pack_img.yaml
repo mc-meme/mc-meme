@@ -48,13 +48,13 @@ jobs:
       uses: actions/upload-artifact@v3
       with:
         name: auto_img_zh_cn    # 上传生成的图片作为 artifact
-        path: auto_img_zh_cn.png  # 替换为你生成图片的路径
+        path: images/auto_img_zh_cn.png  # 替换为你生成图片的路径
 
     - name: Save stitched image as artifact
       uses: actions/upload-artifact@v3
       with:
         name: auto_img_en    # 上传生成的图片作为 artifact
-        path: auto_img_en.png  # 替换为你生成图片的路径
+        path: images/auto_img_en.png  # 替换为你生成图片的路径
 
     - name: Deploy to GitHub Pages
       id: deployment
