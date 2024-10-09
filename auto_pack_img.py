@@ -96,11 +96,14 @@ def stitch_images_bin_packing(images):
 
 
 
-def load_images_from_folder(folder):
+def load_images_from_folder(folder,max_height=384,max_width=284):
     images = []
     for filename in os.listdir(folder):
         img = cv2.imread(os.path.join(folder, filename))
         if img is not None:
+            if max_height is not None and max_width is not None:
+                if img.shape[0] > max_height or img.shape[1] > max_width:
+                    img = cv2.resize(img, (min(img.shape[1], max_width), min(img.shape[0], max_height)))
             images.append(img)
     return images
 
