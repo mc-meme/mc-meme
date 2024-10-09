@@ -98,7 +98,7 @@ def stitch_images_bin_packing(images):
 
 
 
-def load_images_from_folder(folder,max_height=512,max_width=512):
+def load_images_from_folder(folder,max_height=256,max_width=256):
     images = []
     for filename in os.listdir(folder):
         img = cv2.imread(os.path.join(folder, filename))
