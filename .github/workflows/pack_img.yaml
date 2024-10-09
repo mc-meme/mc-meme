@@ -7,18 +7,25 @@ on:
   pull_request:
     branches:
       - main  # 当对 main 分支创建 PR 时触发
-permissions:
-  contents: write  # 允许对代码库的写入权限
+  workflow_dispatch:
+
 jobs:
   run-script:
+    permissions:
+      contents: write  # 允许对代码库的写入权限
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest  # 使用最新的 Ubuntu 运行环境
 
     steps:
     - name: Checkout repository
-      uses: actions/checkout@v3  # 检出当前仓库代码
+      uses: actions/checkout@v4  # 检出当前仓库代码
 
     - name: Set up Python
-      uses: actions/setup-python@v4
+      uses: actions/setup-python@v5
       with:
         python-version: '3.x'  # 设置 Python 版本
 
@@ -29,26 +36,14 @@ jobs:
 
     - name: Run image stitching script
       run: |
-        python auto_pack_img.py  # 运行你的 Python 脚本（替换为你的脚本文件名）
+        mkdir images
+        ./auto_pack_img.py
 
-    - name: Save stitched image as artifact
-      uses: actions/upload-artifact@v3
+    - name: Upload Pages artifact
+      uses: actions/upload-pages-artifact@v3
       with:
-        name: auto_img_zh_cn    # 上传生成的图片作为 artifact
-        path: auto_img_zh_cn.png  # 替换为你生成图片的路径
+        path: images
 
-    - name: Save stitched image as artifact
-      uses: actions/upload-artifact@v3
-      with:
-        name: auto_img_en    # 上传生成的图片作为 artifact
-        path: auto_img_en.png  # 替换为你生成图片的路径
-    - name: Commit and push updated file
-      run: |
-        git config --global user.name "github-actions[bot]"
-        git config --global user.email "github-actions[bot]@users.noreply.github.com"
-        git add auto_img_zh_cn.png  # 添加你想要提交的文件
-        git add auto_img_en.png
-        git commit -m "Update file with new data"
-        git push origin main  # 推送更改回 main 分支
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # 使用 GitHub 提供的 Token 推送更改
+    - name: Deploy to GitHub Pages
+      id: deployment
+      uses: actions/deploy-pages@v4
