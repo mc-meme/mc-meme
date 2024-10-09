@@ -104,10 +104,10 @@ def load_images_from_folder(folder):
 
 
 
-folder = 'testimg'
+folder = 'pullrequests'
 images = load_images_from_folder(folder)
 
 stitched_image = stitch_images_bin_packing(images)
 
 
-cv2.imwrite('stitched_image_rect.jpg', stitched_image)
+cv2.imwrite('auto_img.png', stitched_image)

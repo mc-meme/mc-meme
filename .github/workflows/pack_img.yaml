@@ -28,10 +28,21 @@ jobs:
 
     - name: Run image stitching script
       run: |
-        python your_script.py  # 运行你的 Python 脚本（替换为你的脚本文件名）
+        python auto_pack_img.py  # 运行你的 Python 脚本（替换为你的脚本文件名）
 
     - name: Save stitched image as artifact
       uses: actions/upload-artifact@v3
       with:
-        name: stitched_image  # 上传生成的图片作为 artifact
-        path: optimized_stitched_image.jpg  # 替换为你生成图片的路径
+        name: stitched_image    # 上传生成的图片作为 artifact
+        path: auto_img.png  # 替换为你生成图片的路径
+
+
+    - name: Commit and push updated file
+      run: |
+        git config --global user.name "github-actions[bot]"
+        git config --global user.email "github-actions[bot]@users.noreply.github.com"
+        git add auto_img.png  # 添加你想要提交的文件
+        git commit -m "Update file with new data"
+        git push origin main  # 推送更改回 main 分支
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # 使用 GitHub 提供的 Token 推送更改
