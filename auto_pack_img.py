@@ -1,3 +1,5 @@
+import random
+
 import cv2
 import numpy as np
 import os
@@ -46,8 +48,8 @@ def grow_node(root, width, height):
     elif can_grow_down:
         return grow_down(root, width, height)
     else:
-        root.width=root.width+width
-        root.height=root.height+height
+        root.width=root.width+width//2
+        root.height=root.height+height//2
         return grow_node(root, width, height)
 
 
@@ -96,15 +98,21 @@ def stitch_images_bin_packing(images):
 
 
 
-def load_images_from_folder(folder,max_height=384,max_width=284):
+def load_images_from_folder(folder,max_height=512,max_width=512):
     images = []
     for filename in os.listdir(folder):
         img = cv2.imread(os.path.join(folder, filename))
         if img is not None:
             if max_height is not None and max_width is not None:
                 if img.shape[0] > max_height or img.shape[1] > max_width:
-                    img = cv2.resize(img, (min(img.shape[1], max_width), min(img.shape[0], max_height)))
+                    scw=img.shape[1]/max_width
+                    sch=img.shape[0]/max_height
+                    mac=max(scw,sch)
+                    img = cv2.resize(img, (int(img.shape[1]//mac),int(img.shape[0]//mac)))
+                    # img = cv2.resize(img, (min(img.shape[1], max_width), min(img.shape[0], max_height)))
+                    # img = cv2.resize(img, (min(img.shape[1], max_width), min(img.shape[0], max_height)))
             images.append(img)
+    random.shuffle(images)
     return images
 
 
