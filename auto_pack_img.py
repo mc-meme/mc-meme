@@ -114,6 +114,16 @@ def load_images_from_folder(folder,max_height=768,max_width=768):
                     # img = cv2.resize(img, (min(img.shape[1], max_width), min(img.shape[0], max_height)))
             images.append(img)
     random.shuffle(images)
+    scc=[]
+    for i in images:
+        w=i.shape[1]
+        h=i.shape[0]
+        sizezz=w*h
+        scc.append((sizezz,i))
+    scc.sort(key=lambda x: x[0], reverse=True)
+    images=[]
+    for i in scc:
+        images.append(i[1])
     return images
 
 
@@ -124,7 +134,7 @@ images = load_images_from_folder(folder)
 stitched_image = stitch_images_bin_packing(images)
 
 
-cv2.imwrite('images/auto_img_zh_cn.png', stitched_image)
+cv2.imwrite('auto_img_zh_cn.png', stitched_image)
 
 
 folder = 'en'
@@ -133,4 +143,4 @@ images = load_images_from_folder(folder)
 stitched_image = stitch_images_bin_packing(images)
 
 
-cv2.imwrite('images/auto_img_en.png', stitched_image)
+cv2.imwrite('auto_img_en.png', stitched_image)
