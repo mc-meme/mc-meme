@@ -3,6 +3,7 @@
 欢迎各位提交[Pull Request](https://github.com/mc-meme/mc-meme/pulls)来扩展这张图
 
 Pull Request的时候提交小图即可 大图太容易冲突了
+详细 要求 单图提交（3个梗图就提交3份 提交到 指定语言的文件夹就好 （名字随意 不要中文 opencv会爆炸） 不要透明背景 
 
 [QQ群](http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=GSK0q5Be9BtgPh-7UDEgw1XUc9eNlb_E&authKey=s54nZ9lIbjETFV2sQj65vJHoH04tg%2Bst%2FB%2Fo0WgVTyRGo%2BxL0ZPw8%2BHX3oNnr%2FIo&noverify=0&group_code=810025413)
 
