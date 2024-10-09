@@ -46,7 +46,9 @@ def grow_node(root, width, height):
     elif can_grow_down:
         return grow_down(root, width, height)
     else:
-        return None
+        root.width=root.width+width
+        root.height=root.height+height
+        return grow_node(root, width, height)
 
 
 def grow_right(root, width, height):
