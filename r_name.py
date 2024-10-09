@@ -19,7 +19,7 @@ def rename_files_in_folder(folder_path):
     for index, file_name in enumerate(files):
 
         ext = os.path.splitext(file_name)[1]
-        new_name = f"{index + 1}_{ext}"
+        new_name = f"{index + 1}{ext}"
 
 
         old_file_path = os.path.join(folder_path, file_name)
