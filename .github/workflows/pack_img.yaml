@@ -1,0 +1,37 @@
+name: Run Image Stitching Script
+
+on:
+  push:
+    branches:
+      - main  # 当推送到 main 分支时触发
+  pull_request:
+    branches:
+      - main  # 当对 main 分支创建 PR 时触发
+
+jobs:
+  run-script:
+    runs-on: ubuntu-latest  # 使用最新的 Ubuntu 运行环境
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3  # 检出当前仓库代码
+
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.x'  # 设置 Python 版本
+
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install opencv-python numpy  # 安装必要的依赖包
+
+    - name: Run image stitching script
+      run: |
+        python your_script.py  # 运行你的 Python 脚本（替换为你的脚本文件名）
+
+    - name: Save stitched image as artifact
+      uses: actions/upload-artifact@v3
+      with:
+        name: stitched_image  # 上传生成的图片作为 artifact
+        path: optimized_stitched_image.jpg  # 替换为你生成图片的路径
