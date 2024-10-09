@@ -7,7 +7,8 @@ on:
   pull_request:
     branches:
       - main  # 当对 main 分支创建 PR 时触发
-
+permissions:
+  contents: write  # 允许对代码库的写入权限
 jobs:
   run-script:
     runs-on: ubuntu-latest  # 使用最新的 Ubuntu 运行环境
