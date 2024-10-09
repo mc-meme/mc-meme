@@ -1,6 +1,6 @@
 # mcmeme
 
-欢迎各位提交[Pull Request](https://github.com/LIPiston/mcmeme/pulls)来扩展这张图
+欢迎各位提交[Pull Request](https://github.com/mc-meme/mc-meme/pulls)来扩展这张图
 
 Pull Request的时候提交小图即可 大图太容易冲突了
 
@@ -53,4 +53,5 @@ Pull Request的时候提交小图即可 大图太容易冲突了
 在此感谢所有此图以及此GitHub仓库的贡献者
 
 ## Star历史
-[![Stargazers over time](https://starchart.cc/LIPiston/mcmeme.svg?variant=adaptive)](https://starchart.cc/LIPiston/mcmeme)
+[![Star History Chart](https://api.star-history.com/svg?repos=mc-meme/mc-meme&type=Date)](https://star-history.com/#mc-meme/mc-meme&Date)
+
