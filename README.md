@@ -10,9 +10,9 @@ Pull Request的时候提交小图即可 大图太容易冲突了
 ![](latest.png)
 
 ## 自动生成的大图
-![auto_zh_cn](https://mc-meme.github.io/mc-meme/auto_img_zh_cn.png.jpg)
+![https://mc-meme.github.io/mc-meme/auto_img_zh_cn.png.jpg](https://mc-meme.github.io/mc-meme/auto_img_zh_cn.png.jpg)
 
-![](https://mc-meme.github.io/mc-meme/auto_img_en.png.jpg)
+![https://mc-meme.github.io/mc-meme/auto_img_en.png.jpg](https://mc-meme.github.io/mc-meme/auto_img_en.png.jpg)
 
 
 ----------------------
