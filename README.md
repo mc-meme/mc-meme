@@ -55,5 +55,5 @@ Pull Request的时候提交小图即可 大图太容易冲突了
 在此感谢所有此图以及此GitHub仓库的贡献者
 
 ## Star历史
-[![Star History Chart](https://api.star-history.com/svg?repos=mc-meme/mc-meme&type=Date)](https://star-history.com/#mc-meme/mc-meme&Date)
+[![Star History Chart](https://star-history.dera.page/svg?repos=mc-meme/mc-meme&type=Date)](https://star-history.dera.page/#mc-meme/mc-meme&Date)
 
