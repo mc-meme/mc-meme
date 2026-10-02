@@ -54,6 +54,12 @@ Pull Request的时候提交小图即可 大图太容易冲突了
 
 在此感谢所有此图以及此GitHub仓库的贡献者
 
-## Star历史
-[![Star History Chart](https://star-history.dera.page/svg?repos=mc-meme/mc-meme&type=Date)](https://star-history.dera.page/#mc-meme/mc-meme&Date)
+## Star History
 
+<a href="https://star-history.dera.page/mc-meme/mc-meme?legend=bottom-right">
+ <picture>
+   <source media="(prefers-color-scheme: dark)" srcset="https://star-history.dera.page/svg?repos=mc-meme/mc-meme&theme=dark&legend=bottom-right" />
+   <source media="(prefers-color-scheme: light)" srcset="https://star-history.dera.page/svg?repos=mc-meme/mc-meme&legend=bottom-right" />
+   <img alt="Star History Chart" src="https://star-history.dera.page/svg?repos=mc-meme/mc-meme&legend=bottom-right" />
+ </picture>
+</a>
